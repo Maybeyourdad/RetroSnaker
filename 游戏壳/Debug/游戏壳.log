@@ -1,18 +1,14 @@
-﻿生成启动时间为 2017/11/10 20:04:39。
-     1>项目“F:\英诺维新\教案讲师用\项目\游戏壳\游戏壳\游戏壳.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2018/6/28 0:40:12。
+     1>项目“F:\英诺维新\GitDownload\RetroSnaker\游戏壳\游戏壳.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\游戏壳.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt snakelist.cpp
-         snakelist.cpp
-     1>f:\英诺维新\教案讲师用\项目\游戏壳\游戏壳\snakelist.cpp(302): warning C4996: 'itoa': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _itoa. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdlib.h(867) : 参见“itoa”的声明
-     1>f:\英诺维新\教案讲师用\项目\游戏壳\游戏壳\snakelist.cpp(303): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
        ManifestResourceCompile:
          所有输出均为最新。
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\英诺维新\教案讲师用\项目\游戏壳\Debug\游戏壳.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\游戏壳.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\英诺维新\教案讲师用\项目\游戏壳\Debug\游戏壳.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\英诺维新\教案讲师用\项目\游戏壳\Debug\游戏壳.lib" /MACHINE:X86 "Debug\游戏壳.exe.embed.manifest.res"
+         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\英诺维新\GitDownload\RetroSnaker\Debug\游戏壳.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\游戏壳.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\英诺维新\GitDownload\RetroSnaker\Debug\游戏壳.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\英诺维新\GitDownload\RetroSnaker\Debug\游戏壳.lib" /MACHINE:X86 "Debug\游戏壳.exe.embed.manifest.res"
          Debug\bean.obj
          Debug\main.obj
          Debug\snake.obj
@@ -22,12 +18,12 @@
          所有输出均为最新。
        LinkEmbedManifest:
          所有输出均为最新。
-         游戏壳.vcxproj -> F:\英诺维新\教案讲师用\项目\游戏壳\Debug\游戏壳.exe
+         游戏壳.vcxproj -> F:\英诺维新\GitDownload\RetroSnaker\Debug\游戏壳.exe
        FinalizeBuildStatus:
          正在删除文件“Debug\游戏壳.unsuccessfulbuild”。
          正在对“Debug\游戏壳.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“F:\英诺维新\教案讲师用\项目\游戏壳\游戏壳\游戏壳.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“F:\英诺维新\GitDownload\RetroSnaker\游戏壳\游戏壳.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:01.68
+已用时间 00:00:01.87

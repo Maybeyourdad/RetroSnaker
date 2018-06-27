@@ -4,12 +4,19 @@
 #include <malloc.h>
 #include <time.h>
 #include "snakelist.h"
+
 /*  函数声明 */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 void InitGame();		//游戏的初始化
+int gettimeofday(timeval* tv);	// 获取当前时间戳（到毫秒）
+void SetDirect(emDirectionType type);
+
 
 /*  定义全局变量 */
 char szClassName[ ] = "WindowsApp";
+timeval oldTime;
+static bool bStart = false;
+static emDirectionType nOldDirection = DT_Right;
 
 
 CSnakeList snakeList;
@@ -172,7 +179,7 @@ LRESULT CALLBACK
 			{
 				if (snakeList.GetDirect() != DT_Right)
 				{
-					snakeList.ChangeDirection(DT_Left);
+					SetDirect(DT_Left);
 				}
 			}
 			break;
@@ -182,7 +189,7 @@ LRESULT CALLBACK
 			{
 				if (snakeList.GetDirect() != DT_Left)
 				{
-					snakeList.ChangeDirection(DT_Right);
+					SetDirect(DT_Right);
 				}
 			}
 			break;
@@ -192,7 +199,7 @@ LRESULT CALLBACK
 			{
 				if (snakeList.GetDirect() != DT_Down)
 				{
-					snakeList.ChangeDirection(DT_Up);
+					SetDirect(DT_Up);
 				}
 			}
 			break;
@@ -202,7 +209,7 @@ LRESULT CALLBACK
 			{
 				if (snakeList.GetDirect() != DT_Up)
 				{
-					snakeList.ChangeDirection(DT_Down);
+					SetDirect(DT_Down);
 				}
 			}
 
@@ -306,3 +313,41 @@ LRESULT CALLBACK
 	return 0;
 }
 
+void SetDirect(emDirectionType type)
+{
+	if (!bStart)
+	{
+		gettimeofday(&oldTime);
+		bStart = !bStart;
+		nOldDirection = snakeList.GetDirect();
+		snakeList.ChangeDirection(type);
+	}
+	else
+	{
+		timeval newTime;
+		gettimeofday(&newTime);
+		long long t = (newTime.tv_sec * 1000 + newTime.tv_usec / 1000) - (oldTime.tv_sec * 1000 + oldTime.tv_usec / 1000); 
+		if (t > snakeList.GetSpeed())
+		{
+			snakeList.ChangeDirection(type);
+		}
+		else
+		{
+			snakeList.ChangeDirection(nOldDirection);
+		}
+		bStart = !bStart;
+	}
+}
+
+
+int gettimeofday(timeval* tv)
+{
+	union {
+		long long ns100;
+		FILETIME ft;
+	} now;
+	GetSystemTimeAsFileTime (&now.ft);
+	tv->tv_usec = (long) ((now.ns100 / 10LL) % 1000000LL);
+	tv->tv_sec = (long) ((now.ns100 - 116444736000000000LL) / 10000000LL);
+	return 0;
+}
